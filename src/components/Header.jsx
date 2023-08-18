@@ -2,15 +2,20 @@ import React, { useState } from "react";
 import ExpandMore from '../assets/Icons/Down.svg';
 import ExpandLess from '../assets/Icons/Up.svg';
 import Card from './Card';
-import img1 from '../assets/Icons/img1.svg'
-import img2 from '../assets/Icons/img2.svg'
-import img3 from '../assets/Icons/img3.svg'
+import img1 from '../assets/Icons/img1.svg';
+import img2 from '../assets/Icons/img2.svg';
+import img3 from '../assets/Icons/img3.svg';
 
 const Header = () => {
     const [isTechnologyDropdownOpen, setTechnologyDropdownOpen] = useState(false);
+    const [selectedCard, setSelectedCard] = useState("Blow-Fill-Seal"); // Default selected card
 
     const toggleTechnologyDropdown = () => {
         setTechnologyDropdownOpen(!isTechnologyDropdownOpen);
+    };
+
+    const handleCardClick = (content) => {
+        setSelectedCard(content);
     };
 
     return (
@@ -21,9 +26,7 @@ const Header = () => {
                     <ul className="flex gap-14 text-lg">
                         <li><a href="/">Home</a></li>
                         <li><a href="/about">About Us</a></li>
-                        <li
-                            className="relative cursor-pointer"
-                        >
+                        <li className="relative cursor-pointer">
                             <div className="font-light relative">
                                 <div
                                     className={`flex items-center cursor-pointer ${isTechnologyDropdownOpen ? "font-bold" : ""}`}
@@ -37,10 +40,27 @@ const Header = () => {
                                     )}
                                 </div>
                                 {isTechnologyDropdownOpen && (
-                                    <div className="dropdown-menu absolute mt-2 bg-white border border-gray-300 py-2 rounded-lg shadow-lg p-4 flex space-x-4">
-                                        <Card content="Blow-Fill-Seal" img={img1} />
-                                        <Card content="Form-Fill-Seal" img={img2} />
-                                        <Card content="Injection-Stretch-Blow-Molding" img={img3} />
+                                    <div className="dropdown-menu absolute mt-2 bg-white border border-gray-300 p-4 rounded-lg shadow-md w-[739px] h-[205px]">
+                                        <div className="flex flex-row gap-[16px]">
+                                            <Card
+                                                content="Blow-Fill-Seal"
+                                                img={img1}
+                                                isSelected={selectedCard === "Blow-Fill-Seal"}
+                                                onClick={() => handleCardClick("Blow-Fill-Seal")}
+                                            />
+                                            <Card
+                                                content="Form-Fill-Seal"
+                                                img={img2}
+                                                isSelected={selectedCard === "Form-Fill-Seal"}
+                                                onClick={() => handleCardClick("Form-Fill-Seal")}
+                                            />
+                                            <Card
+                                                content="Injection-Stretch-Blow-Molding"
+                                                img={img3}
+                                                isSelected={selectedCard === "Injection-Stretch-Blow-Molding"}
+                                                onClick={() => handleCardClick("Injection-Stretch-Blow-Molding")}
+                                            />
+                                        </div>
                                     </div>
                                 )}
                             </div>
