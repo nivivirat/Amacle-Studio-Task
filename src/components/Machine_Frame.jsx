@@ -13,11 +13,10 @@ const Machine_Frame = () => {
                     alt="Machine"
                     className="absolute w-[100%] h-[100%]"
                 />
-                {/* Fixed circle */}
-                <div className="absolute top-[94px] left-[53px] w-[260px] h-[260px] bg-gradient-to-b from-[#8aa6aa] to-[#8aa6aa] rounded-full" />
+                <div className="absolute top-[94px] left-[23px] w-[260px] h-[260px] rounded-full bg-gradient-to-tr from-[#dcdede] to-[#cbd2d3]"></div>
                 
-                <p className="w-[554px] h-[316px] absolute left-[52px] top-[52px] text-white font-bold text-[60px] leading-[79px] tracking-tight text-left">
-                    <span className="">
+                <p className="w-[554px] h-[316px] absolute left-[52px] top-[52px] text-white font-bold text-[64px] leading-[79px] tracking-tight text-left">
+                    <span className="highlight-text">
                         Providing Industry Solutions <br /> from the Start
                     </span>
                 </p>
