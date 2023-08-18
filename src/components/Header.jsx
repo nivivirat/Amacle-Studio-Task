@@ -1,15 +1,15 @@
 import React, { useState } from "react";
-import ExpandMore from '../assets/Icons/Down.svg';
-import ExpandLess from '../assets/Icons/Up.svg';
+import ExpandMore from '../assets/Icons/Header_Icons/Down.svg';
+import ExpandLess from '../assets/Icons/Header_Icons/Up.svg';
 import Card from './Card';
-import img1 from '../assets/Icons/img1.svg';
-import img2 from '../assets/Icons/img2.svg';
-import img3 from '../assets/Icons/img3.svg';
-import img4 from '../assets/Icons/img4.svg';
-import img5 from '../assets/Icons/img5.svg';
-import img6 from '../assets/Icons/img6.svg';
-import img7 from '../assets/Icons/img7.svg';
-import contact from '../assets/Icons/contact.svg';
+import img1 from '../assets/Icons/Header_Icons/img1.svg';
+import img2 from '../assets/Icons/Header_Icons/img2.svg';
+import img3 from '../assets/Icons/Header_Icons/img3.svg';
+import img4 from '../assets/Icons/Header_Icons/img4.svg';
+import img5 from '../assets/Icons/Header_Icons/img5.svg';
+import img6 from '../assets/Icons/Header_Icons/img6.svg';
+import img7 from '../assets/Icons/Header_Icons/img7.svg';
+import contact from '../assets/Icons/Header_Icons/contact.svg';
 
 const Header = () => {
     const [isTechnologyDropdownOpen, setTechnologyDropdownOpen] = useState(false);
@@ -36,11 +36,13 @@ const Header = () => {
     };
 
     return (
-        <header className="fixed top-0 left-0 w-full bg-white py-4 z-10">
-            <nav className="container mx-auto flex flex-row items-center justify-between">
-                <div className="font-bold text-[44px]">Logo</div>
+        <header className="fixed top-0 left-0 right-0 w-screen bg-white py-4 z-10">
+            <nav className="relative mx-[80px] flex flex-row items-center justify-between">
+                <div className="font-bold text-[44px]">
+                    Logo
+                </div>
                 <div className="font-light relative">
-                    <ul className="flex gap-14 text-lg">
+                    <ul className="flex gap-14 text-[22px]">
                         <li><a href="/">Home</a></li>
                         <li><a href="/about">About Us</a></li>
                         <li className="relative cursor-pointer">
@@ -127,7 +129,7 @@ const Header = () => {
                         <li><a href="/blogs">Blogs</a></li>
                     </ul>
                 </div>
-                <div className="text-lg font-light">
+                <div className="text-[22px] font-light">
                     <ul className="flex flex-col justify-center items-center">
                         <img src={contact} alt="Contact" className="w-4 h-4 mr-2" />
                         <li><a href="/contact">Contact</a></li>

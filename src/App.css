@@ -3,3 +3,10 @@
 .custom-font {
   font-family: 'Roboto Mono', monospace;
 }
+
+/* Machine_Frame.css */
+.highlight-text {
+  background: linear-gradient(#8aa6aa, #8aa6aa) content-box;
+  -webkit-background-clip: text;
+  color: transparent;
+}
