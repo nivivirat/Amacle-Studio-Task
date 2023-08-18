@@ -5,73 +5,131 @@ import Card from './Card';
 import img1 from '../assets/Icons/img1.svg';
 import img2 from '../assets/Icons/img2.svg';
 import img3 from '../assets/Icons/img3.svg';
+import img4 from '../assets/Icons/img4.svg';
+import img5 from '../assets/Icons/img5.svg';
+import img6 from '../assets/Icons/img6.svg';
+import img7 from '../assets/Icons/img7.svg';
+import contact from '../assets/Icons/contact.svg';
 
 const Header = () => {
     const [isTechnologyDropdownOpen, setTechnologyDropdownOpen] = useState(false);
-    const [selectedCard, setSelectedCard] = useState("Blow-Fill-Seal"); // Default selected card
+    const [isApplicationDropdownOpen, setApplicationDropdownOpen] = useState(false);
+    const [selectedTechnologyCard, setSelectedTechnologyCard] = useState("Blow-Fill-Seal");
+    const [selectedApplicationCard, setSelectedApplicationCard] = useState("Pharmaceutical Industry");
 
     const toggleTechnologyDropdown = () => {
         setTechnologyDropdownOpen(!isTechnologyDropdownOpen);
+        setApplicationDropdownOpen(false);
     };
 
-    const handleCardClick = (content) => {
-        setSelectedCard(content);
+    const toggleApplicationDropdown = () => {
+        setApplicationDropdownOpen(!isApplicationDropdownOpen);
+        setTechnologyDropdownOpen(false);
+    };
+
+    const handleTechnologyCardClick = (content) => {
+        setSelectedTechnologyCard(content);
+    };
+
+    const handleApplicationCardClick = (content) => {
+        setSelectedApplicationCard(content);
     };
 
     return (
         <header className="fixed top-0 left-0 w-full bg-white py-4 z-10">
             <nav className="container mx-auto flex flex-row items-center justify-between">
                 <div className="font-bold text-[44px]">Logo</div>
-                <div className="font-light">
+                <div className="font-light relative">
                     <ul className="flex gap-14 text-lg">
                         <li><a href="/">Home</a></li>
                         <li><a href="/about">About Us</a></li>
                         <li className="relative cursor-pointer">
-                            <div className="font-light relative">
-                                <div
-                                    className={`flex items-center cursor-pointer ${isTechnologyDropdownOpen ? "font-bold" : ""}`}
-                                    onClick={toggleTechnologyDropdown}
-                                >
-                                    Technology
-                                    {isTechnologyDropdownOpen ? (
-                                        <img src={ExpandLess} alt="Expand Less" className="ml-2 w-4 h-4" />
-                                    ) : (
-                                        <img src={ExpandMore} alt="Expand More" className="ml-2 w-4 h-4" />
-                                    )}
-                                </div>
-                                {isTechnologyDropdownOpen && (
-                                    <div className="dropdown-menu absolute mt-2 bg-white border border-gray-300 p-4 rounded-lg shadow-md w-[739px] h-[205px]">
-                                        <div className="flex flex-row gap-[16px]">
-                                            <Card
-                                                content="Blow-Fill-Seal"
-                                                img={img1}
-                                                isSelected={selectedCard === "Blow-Fill-Seal"}
-                                                onClick={() => handleCardClick("Blow-Fill-Seal")}
-                                            />
-                                            <Card
-                                                content="Form-Fill-Seal"
-                                                img={img2}
-                                                isSelected={selectedCard === "Form-Fill-Seal"}
-                                                onClick={() => handleCardClick("Form-Fill-Seal")}
-                                            />
-                                            <Card
-                                                content="Injection-Stretch-Blow-Molding"
-                                                img={img3}
-                                                isSelected={selectedCard === "Injection-Stretch-Blow-Molding"}
-                                                onClick={() => handleCardClick("Injection-Stretch-Blow-Molding")}
-                                            />
-                                        </div>
-                                    </div>
+                            <div
+                                className={`flex items-center cursor-pointer ${isTechnologyDropdownOpen ? "font-bold" : ""}`}
+                                onClick={toggleTechnologyDropdown}
+                            >
+                                Technology
+                                {isTechnologyDropdownOpen ? (
+                                    <img src={ExpandLess} alt="Expand Less" className="ml-2 w-4 h-4" />
+                                ) : (
+                                    <img src={ExpandMore} alt="Expand More" className="ml-2 w-4 h-4" />
                                 )}
                             </div>
+                            {isTechnologyDropdownOpen && (
+                                <div className="dropdown-menu absolute mt-2 bg-white border border-gray-300 p-4 rounded-lg shadow-md w-[689px] left-1/2 transform -translate-x-1/2">
+                                    <div className="flex flex-row gap-[16px]">
+                                        <Card
+                                            content="Blow-Fill-Seal"
+                                            img={img1}
+                                            isSelected={selectedTechnologyCard === "Blow-Fill-Seal"}
+                                            onClick={() => handleTechnologyCardClick("Blow-Fill-Seal")}
+                                        />
+                                        <Card
+                                            content="Form-Fill-Seal"
+                                            img={img2}
+                                            isSelected={selectedTechnologyCard === "Form-Fill-Seal"}
+                                            onClick={() => handleTechnologyCardClick("Form-Fill-Seal")}
+                                        />
+                                        <Card
+                                            content="Injection-Stretch-Blow-Molding"
+                                            img={img3}
+                                            isSelected={selectedTechnologyCard === "Injection-Stretch-Blow-Molding"}
+                                            onClick={() => handleTechnologyCardClick("Injection-Stretch-Blow-Molding")}
+                                        />
+                                    </div>
+                                </div>
+                            )}
                         </li>
-                        <li><a href="/applications">Applications</a></li>
+                        <li className="relative cursor-pointer">
+                            <div
+                                className={`flex items-center cursor-pointer ${isApplicationDropdownOpen ? "font-bold" : ""}`}
+                                onClick={toggleApplicationDropdown}
+                            >
+                                Applications
+                                {isApplicationDropdownOpen ? (
+                                    <img src={ExpandLess} alt="Expand Less" className="ml-2 w-4 h-4" />
+                                ) : (
+                                    <img src={ExpandMore} alt="Expand More" className="ml-2 w-4 h-4" />
+                                )}
+                            </div>
+                            {isApplicationDropdownOpen && (
+                                <div className="dropdown-menu absolute mt-2 bg-white border border-gray-300 p-4 rounded-lg shadow-md w-[739px] left-1/2 transform -translate-x-1/2">
+                                    <div className="flex flex-row gap-[16px]">
+                                        <Card
+                                            content="Pharmaceutical Industry"
+                                            img={img4}
+                                            isSelected={selectedApplicationCard === "Pharmaceutical Industry"}
+                                            onClick={() => handleApplicationCardClick("Pharmaceutical Industry")}
+                                        />
+                                        <Card
+                                            content="Cosmetic Industry"
+                                            img={img5}
+                                            isSelected={selectedApplicationCard === "Cosmetic Industry"}
+                                            onClick={() => handleApplicationCardClick("Cosmetic Industry")}
+                                        />
+                                        <Card
+                                            content="Food Industry"
+                                            img={img6}
+                                            isSelected={selectedApplicationCard === "Food Industry"}
+                                            onClick={() => handleApplicationCardClick("Food Industry")}
+                                        />
+                                        <Card
+                                            content="Chemical Industry"
+                                            img={img7}
+                                            isSelected={selectedApplicationCard === "Chemical Industry"}
+                                            onClick={() => handleApplicationCardClick("Chemical Industry")}
+                                        />
+                                    </div>
+                                </div>
+                            )}
+                        </li>
                         <li><a href="/articles">Articles</a></li>
                         <li><a href="/blogs">Blogs</a></li>
                     </ul>
                 </div>
                 <div className="text-lg font-light">
-                    <ul>
+                    <ul className="flex flex-col justify-center items-center">
+                        <img src={contact} alt="Contact" className="w-4 h-4 mr-2" />
                         <li><a href="/contact">Contact</a></li>
                     </ul>
                 </div>

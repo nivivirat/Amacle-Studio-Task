@@ -8,10 +8,10 @@ export default function Card({ content, img, isSelected, onClick }) {
                 background: isSelected ? '#f4f3f8' : 'var(--white, #FFF)',
             }}
         >
-            <div className="w-[80px] h-[80px] rounded-full bg-[#cdd7d8] flex items-center justify-center mb-2" style={{ margin: '20px auto 0' }}>
+            <div className=" w-[80px] h-[80px] rounded-full bg-[#cdd7d8] flex items-center justify-center mb-2" style={{ margin: '20px auto 0' }}>
                 <img src={img} alt="Card Image" className="w-[35px] h-[35px]" />
             </div>
-            <div className="text-center text-lg text-cdd7d8">{content}</div>
+            <div className="text-center text-lg text-cdd7d8 mt-[15px]">{content}</div>
         </div>
     );
 }
