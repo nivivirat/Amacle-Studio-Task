@@ -3,19 +3,11 @@ import './App.css';
 import { useEffect } from "react";
 import Machine_Frame from "./components/Machine_Frame";
 import WhyMicrofab from "./components/Right/Why_Microfab";
-<<<<<<< HEAD
-import img1 from './assets/Icons/air.svg';
-import arrow from './assets/Icons/arrow.svg';
-import bootle from './assets/Icons/bottle.svg';
-import truck from './assets/Icons/truck.svg';
-import Design from './components/Right/Design';
-=======
 import img1 from './assets/Icons/air.svg'
 import arrow from './assets/Icons/arrow.svg'
 import bootle from './assets/Icons/bottle.svg'
 import truck from './assets/Icons/truck.svg'
 import Design from './components/Right/Design'
->>>>>>> 59c4df5d8893978b0dddb05517d26434e9a760e0
 import Sold from "./components/Right/Sold";
 
 export default function App() {
@@ -27,8 +19,8 @@ export default function App() {
   }, []);
 
   return (
-    <div className="custom-font flex flex-col">
-      <div>
+    <div className="custom-font flex flex-col w-screen">
+      <div className="w-[100%]">
         <Header />
       </div>
       <div className="flex flex-row">

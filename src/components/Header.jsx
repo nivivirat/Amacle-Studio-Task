@@ -36,7 +36,7 @@ const Header = () => {
     };
 
     return (
-        <header className="fixed top-0 left-0 right-0 w-screen bg-white py-4 z-10">
+        <header className="fixed top-0 left-0 right-0 w-[100%] bg-white py-4 z-10 border-2">
             <nav className="relative mx-[80px] flex flex-row items-center justify-between">
                 <div className="font-bold text-[44px]">
                     Logo
