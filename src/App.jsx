@@ -1,15 +1,24 @@
 import Header from "./components/Header"
 import './App.css';
+import { useEffect } from "react";
 import Machine_Frame from "./components/Machine_Frame";
 import WhyMicrofab from "./components/Right/Why_Microfab";
 import img1 from './assets/Icons/air.svg'
 import arrow from './assets/Icons/arrow.svg'
 import bootle from './assets/Icons/bottle.svg'
-import truck from './assets/Icons/truck.svg'
+import truck from './assets/Icons/tcls
+ruck.svg'
 import Design from './components/Right/Design'
 import Sold from "./components/Right/Sold";
 
 export default function App() {
+
+  useEffect(() => {
+    // Set the zoom level to 67%
+    document.body.style.zoom = '67%';
+
+  }, []);
+
   return (
     <div className="custom-font flex flex-col">
       <div>
