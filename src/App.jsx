@@ -3,12 +3,11 @@ import './App.css';
 import { useEffect } from "react";
 import Machine_Frame from "./components/Machine_Frame";
 import WhyMicrofab from "./components/Right/Why_Microfab";
-import img1 from './assets/Icons/air.svg'
-import arrow from './assets/Icons/arrow.svg'
-import bootle from './assets/Icons/bottle.svg'
-import truck from './assets/Icons/tcls
-ruck.svg'
-import Design from './components/Right/Design'
+import img1 from './assets/Icons/air.svg';
+import arrow from './assets/Icons/arrow.svg';
+import bootle from './assets/Icons/bottle.svg';
+import truck from './assets/Icons/truck.svg';
+import Design from './components/Right/Design';
 import Sold from "./components/Right/Sold";
 
 export default function App() {
