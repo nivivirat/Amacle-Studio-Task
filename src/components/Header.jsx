@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import ExpandMore from '../assets/Icons/Header_Icons/Down.svg';
 import ExpandLess from '../assets/Icons/Header_Icons/Up.svg';
 import Card from './Card';
-import img1 from '../assets/Icons/Header_Icons/img1.svg';
-import img2 from '../assets/Icons/Header_Icons/img2.svg';
-import img3 from '../assets/Icons/Header_Icons/img3.svg';
-import img4 from '../assets/Icons/Header_Icons/img4.svg';
-import img5 from '../assets/Icons/Header_Icons/img5.svg';
-import img6 from '../assets/Icons/Header_Icons/img6.svg';
-import img7 from '../assets/Icons/Header_Icons/img7.svg';
+import img1 from '../assets/Icons/Header_Icons/Img1.svg';
+import img2 from '../assets/Icons/Header_Icons/Img2.svg';
+import img3 from '../assets/Icons/Header_Icons/Img3.svg';
+import img4 from '../assets/Icons/Header_Icons/Img4.svg';
+import img5 from '../assets/Icons/Header_Icons/Img5.svg';
+import img6 from '../assets/Icons/Header_Icons/Img6.svg';
+import img7 from '../assets/Icons/Header_Icons/Img7.svg';
 import contact from '../assets/Icons/Header_Icons/contact.svg';
 
 const Header = () => {
